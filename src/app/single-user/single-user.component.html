@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row user-container">
+    <div class="col-sm-12" *ngFor="let user of singleUser">
+      <!-- main card -->
+      <div class="thumbnail">
+        <div class="header bg-dark">
+          <h5>User Name: {{ user.login }}</h5>
+        </div>
+        <div class="img-div">
+          <div><img class="image" src="{{ user.avatar_url }}" /></div>
+        </div>
+
+        <div>
+          <div><span>Name</span></div>
+          <div><span>Followers</span></div>
+          <div><span>Following</span></div>
+          <div><span>Repository</span></div>
+          <div><span>Location</span></div>
+          <div><span>Description(Bio)</span></div>
+        </div>
+
+        <div>
+          <div>
+            <span>: {{ user.name }}</span>
+          </div>
+          <div>
+            <span>: {{ user.followers }}</span>
+          </div>
+          <div>
+            <span>: {{ user.following }}</span>
+          </div>
+          <div>
+            <span>: {{ user.public_repos }}</span>
+          </div>
+          <div>
+            <span>: {{ user.location }}</span>
+          </div>
+          <div>
+            <span>: {{ user.bio }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- pagination component goes here -->

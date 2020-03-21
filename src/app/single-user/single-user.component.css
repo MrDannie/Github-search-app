@@ -1,0 +1,36 @@
+.notFound {
+  display: grid;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.thumbnail {
+  display: grid;
+  box-shadow: 5px 5px 10px grey;
+  width: 100%;
+  grid-template-columns: 200px auto auto;
+  grid-template-rows: 30px 150px;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  color: white;
+  padding-left: 10px;
+  font-weight: bold;
+  align-content: center;
+}
+
+div > span {
+  font-weight: bold;
+}
+.image {
+  height: 130px;
+  width: 130px;
+}
+
+.img-div {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}

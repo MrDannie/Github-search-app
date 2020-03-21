@@ -1,0 +1,36 @@
+<div>
+  <div>
+    <h3>
+      <span *ngIf="totalUsersFound">Total Result:</span> {{ totalUsersFound }}
+    </h3>
+  </div>
+  <div class="container">
+    <div class="row user-container">
+      <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let user of usersFound">
+        <!-- main card -->
+        <div
+          class="thumbnail"
+          [routerLink]="['/singleUser', user.login]"
+          [queryParams]="{ userName: user.login }"
+        >
+          <div class="header bg-dark">
+            <a
+              ><h5>User Name: {{ user.login }}</h5></a
+            >
+          </div>
+          <div class="img-div">
+            <div><img class="image" src="{{ user.avatar_url }}" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-pagination
+    *ngIf="usersFound"
+    [pageSize]="pageSize"
+    [totalItems]="totalUsersFound"
+    (pageChanged)="pageChanged($event)"
+    class="bg-dark"
+  ></app-pagination>
+</div>
+<!-- pagination component goes here -->

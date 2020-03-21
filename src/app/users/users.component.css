@@ -1,0 +1,51 @@
+.notFound {
+  display: grid;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.thumbnail {
+  display: grid;
+  box-shadow: 5px 5px 10px grey;
+  width: 100%;
+  grid-template-columns: auto;
+  grid-template-rows: 30px auto;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: end;
+  color: white;
+  padding-left: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+div > span {
+  font-weight: bold;
+}
+.image {
+  height: 100px;
+  width: 100px;
+}
+
+div a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.img-div {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: end;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  margin: auto;
+  padding: auto;
+}
+.user-container {
+  margin-bottom: 50px;
+}
